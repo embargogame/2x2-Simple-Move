@@ -5,14 +5,34 @@ import java.util.*;
 
 public class PhaseOne extends JFrame{
    
+   private JPanel board;
+   private JButton[] pieces;
+   
    public static void main(String[]args){
       PhaseOne gui = new PhaseOne();
    }   
    public PhaseOne(){
+      //GUI
       setTitle("Game");
       setSize(300,300);
       setDefaultCloseOperation(EXIT_ON_CLOSE);
       setLocationRelativeTo(null);
       setVisible(true);
+      
+      pieces = new JButton[4];
+      board = new JPanel();
+      board.setLayout(new GridLayout(2,2));
+      
+      //This loop create and name each button
+      for(int i=0;i<4;i++){
+         char ch=(char)('0'+i+1);
+         pieces[i]=new JButton(""+ch);
+      }
+      //This loop makes board to add every button
+       for(int i=0;i<4;i++){
+          board.add(pieces[i]);
+       }
+       
+      add(board);
    }
 }
