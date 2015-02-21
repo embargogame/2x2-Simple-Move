@@ -1,1 +1,18 @@
-Hello world
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
+
+public class PhaseOne extends JFrame{
+   
+   public static void main(String[]args){
+      PhaseOne gui = new PhaseOne();
+   }   
+   public PhaseOne(){
+      setTitle("Game");
+      setSize(300,300);
+      setDefaultCloseOperation(EXIT_ON_CLOSE);
+      setLocationRelativeTo(null);
+      setVisible(true);
+   }
+}
